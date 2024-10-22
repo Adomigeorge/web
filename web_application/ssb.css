@@ -1,0 +1,107 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.section {
+    height: 100vh; /* Full viewport height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: white;
+    position: relative;/* Required for background position */
+    background-position: center;/*Center the background image */
+    background-size: cover; /* Cover the entire section */
+}
+
+.logo {
+    width: 70px; /* Set your desired logo width */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.logo-container {
+    position: absolute; /* Position the logo container absolutely */
+    top: 20px; /* Distance from the top of the section */
+    right: 20px; /* Distance from the right of the section */
+    z-index: 1000; /* Ensure the logo appears above other elements */
+}
+
+#section1 {
+    background: linear-gradient(to bottom, #cbdbe5, #e0ebe9 75%); /* Blue fading to orange */
+    background-image: url('R1.jpeg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire section */
+    background-position: center; /* Center the image */
+}
+
+.welcome-message {
+    position: absolute; /* Position it absolutely within the section */
+    top: 20px; /* Distance from the top of the section */
+    color: black; /* Change text color to black */
+    left: 50%; /* Center it horizontally */
+    transform: translateX(-50%); /* Offset by half of its width to truly center */
+    font-size: 2em; /* Adjust font size as needed */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.intro-text {
+    text-align: left; /* Align text to the left */
+    position: absolute; /* Position it absolutely within the section */
+    top: 100px; /* Distance from the top of the section (adjust as needed) */
+    left: 20px; /* Distance from the left edge of the section */
+    color: wheat; /* Change text color to black */
+    font-size: 1.5em; /* Adjust font size as needed */
+    z-index: 1000; /* Ensure it appears above other elements */
+    max-width: 700px; /* Optional: Limit the width of the text */
+}
+
+.button-container {
+    display: flex; /* Use flexbox for alignment */
+    justify-content: center; /* Center buttons horizontally */
+    margin-top: auto; /* Push buttons to the bottom */
+    margin-bottom: 20px; /* Space below the buttons */
+    z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.button {
+    background-color: black; /* Background color for buttons */
+    color: white; /* Text color */
+    padding: 10px 20px; /* Padding for button */
+    margin: 0 30px; /* Space between buttons */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    text-decoration: none; /* Remove underline from links */
+    font-size: 1em; /* Font size for button text */
+    transition: background-color 0.3s; /* Smooth transition */
+}
+
+.button:hover {
+    background-color: darkgreen; /* Change background color on hover */
+}
+
+
+#section1::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(to bottom, rgba(234, 238, 237, 0), rgba(238, 243, 243, 0.6)); /* Fade effect */
+    pointer-events: none; /* Ensure clicks go through the overlay */
+}
+
+#section2 {
+    background: linear-gradient(to bottom, #eaeeed, #e4e9e9 70%);
+    /*background-image: url('R2.jpeg');*/
+}
+
+#section3 {
+    background: linear-gradient(to bottom, #e4e9e9, #e4e9e9 75%);
+    /*background-image: url('R3.jpeg');*/
+}
+
+#section4 {
+    background: linear-gradient(to bottom, #e4e9e9, #e4e9e9 75%);
+    /*background-image: url('R4.jpeg');*/
+}
