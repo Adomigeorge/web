@@ -1,0 +1,57 @@
+.community-events-page {
+    font-family: Arial, sans-serif;
+    margin: 0 auto;
+    padding: 20px;
+    max-width: 800px;
+    background-color:  #f3e9e9;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+.community-events-page h1 {
+    text-align: center;
+    color: #007BFF;
+}
+
+.community-events-page section {
+    margin-bottom: 20px;
+}
+
+.community-events-page h2 {
+    color: #333333;
+    margin-bottom: 10px;
+}
+
+.community-events-page p, .community-events-page ul {
+    color: #555555;
+    line-height: 1.6;
+}
+
+.community-events-page ul li {
+    margin-bottom: 8px;
+}
+/* Additional styling for the back button */
+.back-button {
+    background-color: #6090c4;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    position: absolute; /* Positioning the button */
+    top: 20px; /* Distance from the top */
+    right: 20px; /* Distance from the right */
+    z-index: 1000; /* To ensure it stays on top */
+}
+
+.back-button:hover {
+    background-color: #0056b3; /* Darker shade on hover */
+}
+
+footer {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9em;
+    color: #777;
+}

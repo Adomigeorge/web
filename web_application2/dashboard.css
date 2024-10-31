@@ -1,0 +1,33 @@
+
+body {
+    background: url('your-background-image.jpg') no-repeat center center fixed; /* Replace with your background image */
+    background-size: cover; /* Cover the entire page */
+    color: #fff; /* White text color */
+}
+.navbar-custom {
+    background-color: rgba(44, 125, 212, 0.8); /* Custom navbar color with transparency */
+}
+
+.navbar-brand{
+    color: black;
+}
+.card {
+    margin: 15px; /* Space around cards */
+    background-color: rgba(255, 255, 255, 0.9); /* Light card background */
+    color: black; /* Dark text color */
+}
+.welcome-message {
+    margin: 10px; /* Margin for the welcome message */
+}
+.nav-link {
+    padding: 10px 15px; /* Adjust padding for buttons */
+    margin-left: 10px;  /* Add space between buttons */
+    border-radius: 5px; /* Rounded corners */
+    color: black;
+}
+.nav-links {
+    padding: 10px 15px; /* Adjust padding for buttons */
+    margin-left: 10px;  /* Add space between buttons */
+    border-radius: 8px; /* Rounded corners */
+    color: rgb(235, 15, 15);
+}

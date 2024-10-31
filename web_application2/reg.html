@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register - HIV/AIDS Support</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Center the form and reduce input field width */
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Full height of the viewport */
+            margin: 0;
+        }
+        .container {
+            width: 600px; /* Set a fixed width for the form */
+        }
+        .form-control {
+            width: 100%; /* Input fields will take full width of the container */
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 class="text-center mt-5">Register for HIV/AIDS Support</h2>
+        <form class="mt-4" id="registrationForm" onsubmit="return handleRegistration(event);">
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Enter your full name" required>
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter your email" required>
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password" required>
+            </div>
+            <div class="form-group">
+                <label for="status">HIV Status</label>
+                <select class="form-control" id="status" required>
+                    <option value="">Select your HIV status</option>
+                    <option value="HIV Positive">HIV Positive</option>
+                    <option value="HIV Negative">HIV Negative</option>
+                    <option value="Not Aware">Not Aware</option>
+                </select>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Register</button>
+        </form>
+        <p class="text-center mt-3" style="color: white;">Already have an account? <a href="login.html">Login here</a></p>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <script>
+        function handleRegistration(event) {
+            event.preventDefault(); // Prevent the default form submission
+            
+            // Get input values
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const status = document.getElementById('status').value;
+
+            // Store values in local storage
+            localStorage.setItem('userName', name);
+            localStorage.setItem('userEmail', email);
+            localStorage.setItem('userStatus', status);
+
+            // Simulate registration validation (replace this with your actual validation logic)
+            if (name && email && password && status) {
+                // Redirect to the dashboard
+                
+                window.location.href = 'dashboard.html';
+            } else {
+                alert('Please fill in all fields.');
+            }
+        }
+    </script>
+</body>
+</html>
